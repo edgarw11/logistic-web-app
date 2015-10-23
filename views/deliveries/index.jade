@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    h1.
+         #{title}
+    ul
+        - each delivery, i in deliveries
+            li   
+                = delivery.id
+                = delivery.orderid
+                = delivery.clientid
+                = delivery.receivername
+                = delivery.receivercpf
+                = delivery.isreceiverthebuyer
+                = delivery.deliverydate
+                = delivery.geolocation
+                = delivery.id
+                form(action='/deliveries/#{delivery._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p 
+                    a(href='/deliveries/#{delivery._id}/edit') Edit
+                p
+                    a(href='/deliveries/#{delivery._id}') Show

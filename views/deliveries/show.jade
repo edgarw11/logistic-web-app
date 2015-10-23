@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h1.
+        Infophoto #{delivery._id}
+    p orderid: #{delivery.orderid}
+    p clientid: #{delivery.clientid}
+    p receivername: #{delivery.receivername}
+    p receivercpf: #{delivery.receivercpf}
+    p isreceiverthebuyer: #{delivery.isreceiverthebuyer}
+    p deliverydate: #{delivery.deliverydate}
+    p geolocation: #{delivery.geolocation}

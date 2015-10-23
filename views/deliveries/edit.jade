@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    h1.
+        Delivery ID #{delivery._id}
+    form(action='/deliveries/#{delivery._id}/edit',method='put',name='updatedelivery',enctype='application/x-www-form-urlencoded')            
+        p orderid: 
+            input#inputOrderid(type="number", value='#{delivery.orderid}', name="orderid")
+        p clientid: 
+            input#inputClientid(type="number", value='#{delivery.clientid}', name="clientid")
+        p receivername:
+            input#inputReceivername(type="text", value='#{delivery.receivername}', name="receivername")
+        p receivercpf: 
+            input#inputReceivercpf(type="text", value='#{delivery.receivercpf}', name="receivercpf")
+        p Is Receiver the buyer?: 
+            input#inputIsreceiverthebuyer(type="checkbox", name="isreceiverthebuyer", checked=('#{delivery.isreceiverthebuyer}'==='true' ? "checked" : undefined))
+        p geolocation:
+            input#inputGeolocation(type="text", value='#{delivery.geolocation}', name="geolocation")            
+        p 
+            button#btnSubmit(type='submit').
+                Update
+                
+                

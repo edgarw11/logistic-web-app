@@ -7,6 +7,7 @@ var express = require('express'),
     db = require('./model/db'),
     delivery = require('./model/deliveries'),
     routes = require('./routes/index'),
+    deliveries = require('./routes/deliveries'),
     users = require('./routes/users'),
     app = express();
 
@@ -22,8 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', routes);
 app.use('/users', users);
+app.use('/deliveries', deliveries);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

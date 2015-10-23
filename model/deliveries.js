@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');  
-var deliverySchema = new mongoose.Schema({  
-    id: Number,
+var deliverySchema = new mongoose.Schema({      
     orderid: Number,
     clientid: Number,
     receivername: String,

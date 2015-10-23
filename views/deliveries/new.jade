@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddDelivery(name="adddelivery",method="post",action="/deliveries")
+        p orderid: 
+            input#inputOrderid(type="number", placeholder="ex. 1", name="orderid")
+        p clientid: 
+            input#inputClientid(type="number", placeholder="ex. 1", name="clientid")
+        p receivername:
+            input#inputReceivername(type="text", placeholder="ex. John Smith", name="receivername")
+        p receivercpf: 
+            input#inputReceivercpf(type="text", placeholder="ex. 012.345.786-96", name="receivercpf")
+        p Is Receiver the buyer?: 
+            input#inputIsreceiverthebuyer(type="checkbox", name="isreceiverthebuyer")
+        p geolocation:
+            input#inputGeolocation(type="text", name="geolocation")
+        p
+            button#btnSubmit(type="submit") submit
+                        
