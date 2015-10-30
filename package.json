@@ -1,10 +1,11 @@
 {
   "name": "logisticwebapp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "main": "./bin/www",
   "dependencies": {
     "body-parser": "^1.13.3",
     "cookie-parser": "~1.3.5",
