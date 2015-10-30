@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
-var db_name = 'logisticwebapp2';
+var db_name = 'logisticwebapp';
 var username = 'admin';
-var password = 'aWuSUIIFMhfx';
+var password = 'jHDChYhBcl22';
 
 //mongoose.connect('mongodb://localhost/logisticdb');
 mongodb://username:password@host:port/database?options...
