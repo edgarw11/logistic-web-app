@@ -31,7 +31,7 @@ Updates an existing delivery.
 
 Parameters:
 
--id: The id of the delivery to be updated.
+_id: The id of the delivery to be updated.
 
 Body:
 
@@ -51,7 +51,7 @@ Delete the delivery correspondent to the given _id.
 
 Parameters:
 
--id: The id of the delivery to be deleted.
+_id: The id of the delivery to be deleted.
 
 ### GET /deliveries
 
@@ -63,5 +63,5 @@ Get a delivery by id.
 
 Parameters:
 
--id: The id of the delivery to be retrieved.
+_id: The id of the delivery to be retrieved.
 
